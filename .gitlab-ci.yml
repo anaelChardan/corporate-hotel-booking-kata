@@ -1,0 +1,14 @@
+image: docker:stable
+services:
+  - docker:dind
+
+stages:
+  - all
+
+buildStage:
+  stage: all
+  script:
+    - apk update
+    - apk add py-pip python-dev libffi-dev openssl-dev gcc libc-dev make
+    - pip install docker-compose
+    - make test
