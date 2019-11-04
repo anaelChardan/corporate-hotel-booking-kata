@@ -14,7 +14,7 @@ wrapper {
 task acceptance(type: Test) {
     doLast {
         javaexec {
-            main = "cucumber.api.cli.Main"
+            main = "acceptance.context.RunCucumberWithKoin"
             classpath = configurations.testRuntimeClasspath + sourceSets.main.output + sourceSets.test.output
             args = ['--plugin', 'pretty', '--glue', 'acceptance.context', 'src/test/kotlin/use_cases']
         }
@@ -25,6 +25,7 @@ task acceptance(type: Test) {
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 test {
@@ -33,6 +34,7 @@ test {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation "org.koin:koin-core:2.0.1"
     testCompile 'io.cucumber:cucumber-java8:4.2.+'
     testCompile 'io.cucumber:cucumber-junit:4.2.+'
     testImplementation("io.kotlintest:kotlintest-runner-junit5:3.3.2")

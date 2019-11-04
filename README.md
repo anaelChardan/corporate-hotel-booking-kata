@@ -1,4 +1,8 @@
-# Badger
+# Corporate Hotel Booking Kata
+
+My attempt to this [kata](https://katalyst.codurance.com/corporate-hotel-booking)
+
+Warning: I do not know Kotlin that much at that time.
 
 ## native Install
 
@@ -11,4 +15,4 @@ sdk install gradle
 
 ## Testing
 
-It uses [kotlintest](https://github.com/kotlintest/kotlintest/blob/v3.4.2/doc/reference.md)
+It uses [kotlintest](https://github.com/kotlintest/kotlintest/blob/v3.4.2/doc/reference.md) and [cucumber](https://cucumber.io/docs/installation/kotlin/) (`make acceptance`)
